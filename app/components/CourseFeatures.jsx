@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 // 1. Datos de los cursos (Fáciles de actualizar o mover a una base de datos después)
 const coursesData = [
@@ -85,9 +86,9 @@ export default function CourseFeatures() {
                 <span className="text-sm font-medium text-slate-500 flex items-center gap-1">
                   <span>📍</span> {course.logistics}
                 </span>
-                <button className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm flex items-center gap-1 transition-colors">
-                  Detalles <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
-                </button>
+                <Link href={`/cursos/${course.id}`} className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm flex items-center gap-1 transition-colors group">
+                    Detalles <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
             </div>
           ))}

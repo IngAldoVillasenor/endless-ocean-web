@@ -80,7 +80,7 @@ export default function UpcomingTripsPreview() {
 
               {/* Botón de acción */}
               <button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 rounded-xl transition-colors">
-                {trip.isCertification ? 'Esperar detalles' : 'Me interesa (Votar)'}
+                {trip.isCertification ? 'Esperar detalles' : 'Me interesa'}
               </button>
             </div>
           ))}
