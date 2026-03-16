@@ -78,10 +78,17 @@ export default function UpcomingTripsPreview() {
                 <span className="font-semibold">{trip.dates}</span>
               </div>
 
-              {/* Botón de acción */}
-              <button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 rounded-xl transition-colors">
-                {trip.isCertification ? 'Esperar detalles' : 'Me interesa'}
-              </button>
+              {/* Botón de acción convertido en enlace a WhatsApp */}
+                <a 
+                href={`https://wa.me/524771156055?text=${encodeURIComponent(
+                    `¡Hola familia de Endless Ocean! Me interesa recibir más detalles sobre la expedición a ${trip.destination} (${trip.dates}).`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 rounded-xl transition-colors"
+                >
+                {trip.isCertification ? 'Pedir informes del viaje' : 'Me interesa'}
+                </a>
             </div>
           ))}
         </div>
