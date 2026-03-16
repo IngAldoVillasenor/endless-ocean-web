@@ -6,13 +6,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo y Nombre */}
+            {/* Logo y Nombre */}
             <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-            {/* Asegúrate de ajustar la altura (h-10, h-12, etc.) según las proporciones de tu logo */}
             <img 
                 src="/logo-endless.png" 
                 alt="Endless Ocean Scuba Logo" 
-                className="h-12 w-auto object-contain" 
+                // Aquí está la magia de Tailwind:
+                className="w-12 h-12 object-cover rounded-full border-2 border-cyan-500 shadow-md" 
             />
             <span className="text-white font-bold text-xl tracking-tight hidden sm:block">
                 Endless Ocean
