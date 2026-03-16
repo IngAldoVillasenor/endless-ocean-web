@@ -7,12 +7,17 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           
           {/* Logo y Nombre */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <span className="text-3xl">🤿</span>
+            <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+            {/* Asegúrate de ajustar la altura (h-10, h-12, etc.) según las proporciones de tu logo */}
+            <img 
+                src="/logo-endless.png" 
+                alt="Endless Ocean Scuba Logo" 
+                className="h-12 w-auto object-contain" 
+            />
             <span className="text-white font-bold text-xl tracking-tight hidden sm:block">
-              Endless Ocean
+                Endless Ocean
             </span>
-          </div>
+            </div>
           
           {/* Menú de Escritorio */}
           <div className="hidden md:flex space-x-8 items-center">
