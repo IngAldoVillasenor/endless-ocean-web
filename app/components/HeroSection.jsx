@@ -4,12 +4,17 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       
-      {/* 1. CAPA BASE (z-0): Tu imagen de fondo */}
-      <img 
-        src="/background.png" 
-        alt="Buceo" 
-        className="absolute inset-0 w-full h-full object-cover z-0" 
-      />
+        <picture className="absolute inset-0 w-full h-full z-0">
+        {/* Esta imagen se mostrará en pantallas medianas (md) y grandes */}
+        <source media="(min-width: 768px)" srcSet="/background.png" />
+        
+        {/* Esta imagen se mostrará por defecto en celulares */}
+        <img 
+            src="/background-mobile.png" 
+            alt="Buceo" 
+            className="w-full h-full object-cover object-center object-bottom" 
+        />
+        </picture>
 
       {/* 2. EL TRUCO MÁGICO (z-10): El Overlay Oscuro */}
       {/* bg-black/60 significa negro al 60% de opacidad. Puedes subirlo a /70 o bajarlo a /40 */}
